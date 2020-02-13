@@ -3,7 +3,9 @@ package individual_simulations;
 import java.util.*;
 
 /**
- * fire simulation
+ * This class holds all the logic behind the fire simulation so that the fire simulation can be displayed.
+ * We assume that an empty spot will always be a value of 6, a tree spot with a value of 5, and a burning spot with a value of 3
+ * @author Franklin Boampong
  */
 public class Fire extends Simulation {
 

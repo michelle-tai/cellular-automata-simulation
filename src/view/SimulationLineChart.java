@@ -5,6 +5,12 @@ import javafx.scene.chart.*;
 
 import java.util.HashMap;
 
+/**
+ * SimulationLineChart has the code to display simulation's data in the form of a line chart.
+ * Although this was not used in the rest of our code, it helps with future extensions if line charts are needed to be used somewhere else
+ * @author Frankling Boampong
+ */
+
 public class SimulationLineChart {
 
     private CategoryAxis simulationXValues = new CategoryAxis();
@@ -15,6 +21,9 @@ public class SimulationLineChart {
     HashMap<Integer, XYChart.Series> seriesMap = new HashMap<>();
     int time = 0;
 
+    /**
+     * Constructor for the class that sets the labels of the line chart
+     */
     public SimulationLineChart() {
         //super();
         simulationXValues.setLabel("Time");
@@ -24,6 +33,10 @@ public class SimulationLineChart {
 
     }
 
+    /**
+     * Creates the lines in the line chart
+     * @return the line chart
+     */
     public LineChart getLine() {
         //NumberAxis xAxis = new NumberAxis();
         //NumberAxis yAxis = new NumberAxis();
@@ -41,6 +54,11 @@ public class SimulationLineChart {
         }
         return lineChart;
     }
+
+    /**
+     * updates the lines in the line chart
+     * @param myCell the cell so its state can be added in updating the line chart
+     */
 
     public void updateLineChartData(Cell myCell) {
         if (!hash.containsKey(myCell.getCurrentState())) {

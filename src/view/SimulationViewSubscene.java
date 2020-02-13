@@ -23,6 +23,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
+/**
+ * This class contains the information needed to display the simulation and graph
+ * There are dependencies on the XML package since it passes information about the simulation
+ * We assume that the size of the simulation and the size of the graph will always be the same and nonresizable
+ * We also assume the initial step speed with be based on our factor of 10
+ * @author Franklin Boampong
+ * @author Michelle Tai
+ */
+
 public class SimulationViewSubscene extends SubScene {
 
     private static final int FRAMES_PER_SECOND = 60;
@@ -49,6 +58,11 @@ public class SimulationViewSubscene extends SubScene {
     private HashMap<String, XYChart.Series> seriesMap = new HashMap<>();
     private ArrayList<XYChart.Series> timeSeriesArrayList = new ArrayList<>();
 
+    /**
+     * The constructor initializes the all the subparts of this subscene, such as the background, the properties file, the simulation, etc
+     * @param width is the width of the
+     * @param height
+     */
     public SimulationViewSubscene(int width, int height) {
         super(new AnchorPane(), width, height);
         myResources = ResourceBundle.getBundle(DEFAULT_RESOURCE_PACKAGE + "English");

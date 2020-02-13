@@ -2,6 +2,12 @@ package individual_simulations;
 
 import java.util.*;
 
+/**
+ * This class contains all the logic needed for the Segregation simulation.
+ * @author Lucy Gu
+ *
+ */
+
 public class Segregation extends Simulation {
     private int BLUE = 2;
     private int RED = 3;
@@ -72,7 +78,7 @@ public class Segregation extends Simulation {
      * just here because declared in super class
      * @param curCell
      * @param neighbour
-     * @return
+     * @return 0
      */
     public int checkAndReact(int curCell, List<Integer> neighbour) {
         return 0;

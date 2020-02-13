@@ -17,6 +17,7 @@ import java.util.ResourceBundle;
 /**
  * Class SimulationViewInfoLabel which extends the label class
  * Class extends the Label super class
+ * @author Franklin Boampong
  */
 public class SimulationViewInfoLabel extends Label {
     private static final String RESOURCES = "resources";

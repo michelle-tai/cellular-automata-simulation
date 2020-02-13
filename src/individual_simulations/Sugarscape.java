@@ -2,6 +2,12 @@ package individual_simulations;
 
 import java.util.*;
 
+/**
+ * Sugarscape holds all the logic needed for the Sugar Scape simulation.
+ * @author Lucy Gu
+ * @author Franklin Boampong
+ */
+
 public class Sugarscape extends Simulation{
     private int ZERO = 0;
     private int ONE = 7;

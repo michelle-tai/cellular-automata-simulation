@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * rock paper scissor
+ * This class deals with all the logic for the rock paper scissor simulation
+ * @author Franklin Boampong
+ * @author Lucy Gu
  */
 public class RockPaperScissor extends Simulation{
     private int ROCK = 2;

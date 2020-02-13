@@ -6,6 +6,8 @@ import java.util.List;
 
 /**
  * Percolation class holds the rules and update behavior for the percolation simulation
+ * @author Michelle Tai
+ * @author Lucy Gu
  **/
 
 public class Percolation extends Simulation {

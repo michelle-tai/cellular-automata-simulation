@@ -1,7 +1,9 @@
 package individual_simulations;
 
 /**
- * SugarAgent object that holds information
+ * SugarAgent object that holds information for each object in the SugarScape simulation
+ * @author Fanklin Boampong
+ * @author Lucy Gu
  */
 public class SugarAgent {
     private int sugar;

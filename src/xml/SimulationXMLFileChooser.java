@@ -8,6 +8,12 @@ import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 
+/**
+ * This class opens up a file chooser to load in XML configuration files for the simulations
+ * This class depends on Javafx stages
+ * @author Michelle Tai
+ * @author Robert Duvall
+ */
 public class SimulationXMLFileChooser {
 
   // kind of data files to look for
@@ -16,6 +22,12 @@ public class SimulationXMLFileChooser {
   public final static FileChooser FILE_CHOOSER = makeChooser(DATA_FILE_EXTENSION);
   private SimulationXML simXML;
 
+
+  /**
+   * Opens the file chooser and saves the parsed XML information into a SimulationXML object
+   * @param primaryStage is the JavaFX Stage in which the filechooser will pop up
+   * @throws Exception
+   */
   public void openFile (Stage primaryStage) throws Exception {
     File dataFile = FILE_CHOOSER.showOpenDialog(primaryStage);
     while (dataFile != null) {
@@ -34,6 +46,9 @@ public class SimulationXMLFileChooser {
     }
   }
 
+  /**
+   * @return the information parsed from the XML file in the form of a SimulationXML object
+   */
   public SimulationXML getSimulationXMLInfo(){
     return simXML;
   }

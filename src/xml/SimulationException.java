@@ -4,6 +4,11 @@ import cellsociety.SimulationMain;
 
 import java.util.ResourceBundle;
 
+
+/**
+ * This class is used to throw exceptions so that the program can note when there's problems and not completely crash
+ * @author Franklin Boampong
+ */
 public class SimulationException extends RuntimeException {
     private static final long serialVersionUID = 1L;
     private ResourceBundle myResources = SimulationMain.SIMULATION_RESOURCE;

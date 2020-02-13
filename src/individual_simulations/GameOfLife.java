@@ -4,7 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * game of life simulation
+ * GameOfLife extends the Simulation class to hold all the logic pertinent to the Game of Life simulation, such as rules
+ * @author Lucy Gu
  */
 public class GameOfLife extends Simulation{
     private int DEAD = 0;

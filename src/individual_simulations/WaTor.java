@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * WaTor simulation
- * @author LG
+ * WaTor holds all the logic needed for the WaTor simulation
+ * @author Lucy Gu
  */
 public class WaTor extends Simulation {
   private int FISH = 5;

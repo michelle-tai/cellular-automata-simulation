@@ -24,6 +24,12 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ResourceBundle;
 
+/**
+ * This class holds the whole simulation's "view", mainly controlling the buttons view and the placement of the buttons and
+ * where the simulation will be displayed
+ * @author Franklin Boampong
+ */
+
 public class SimulationViewGUI {
 
     public static final double WIDTH = 2000;

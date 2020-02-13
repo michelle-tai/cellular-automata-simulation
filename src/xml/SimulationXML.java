@@ -6,7 +6,7 @@ import java.util.Map;
 
 
 /**
- * Simple immutable value object representing simulation data.
+ * Simple immutable value object representing simulation data
  *
  * @author Michelle Tai
  */

@@ -1,5 +1,10 @@
 package exceptions;
 
+/**
+ * This class is used to throw exceptions so that the program can note when there's problems and not completely crash
+ * @author Franklin Boampong
+ */
+
 public class FileXMLException extends RuntimeException {
 
     // for serialization

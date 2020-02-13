@@ -10,6 +10,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ResourceBundle;
 
+/**
+ * This class creates a general button for our simulation, but styled with hover components and such
+ * @author Franklin Boampong
+ */
+
 public class SimulationViewButton extends Button
 {
     private static final int BUTTON_HEIGHT = 45, BUTTON_WIDTH = 150;
@@ -18,10 +23,11 @@ public class SimulationViewButton extends Button
     private ResourceBundle myResources;
     private String font;
 
-    /*
+
+    /**
      * Constructor method that lays out a button
      * @param words specifies text in button
-     * @ param language specifies form of button to present
+     * @param language language specifies form of button to present
      */
     public SimulationViewButton(String words, String language) {
         myResources = ResourceBundle.getBundle(DEFAULT_RESOURCE_PACKAGE + "English");
