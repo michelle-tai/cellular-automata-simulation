@@ -5,17 +5,20 @@
 
  * Team Member #1 Franklin Boampong
 
-    - Responsibility: Game View including buttons, sliders, linechart, subscenes, Exceptions, 
+    - Responsibility: Game View including buttons, sliders, linechart, subscenes; Exceptions; 
     individual simulations including Fire
+
 
  * Team Member #2 Michelle Tai
 
     - Responsibility: XML parsing, reading, XML exception, saving configurations to XML, individual simulation Percolation
 
+
  * Team Member #3 Lucy Gu
 
-    - Responsibility: Grid super class, RectGrid and TriGrid, Simulation super class, 
+    - Responsibility: Grid super class, RectGrid and TriGrid; Cell super class, RectCell and TriCell; Simulation super class, 
     individual simulations including Game of Life, WaTor, Segregation, RockPaperScissor, Sugarscape
+
 
 ## Design goals
 Our overall design goals were to not pass around our grid and adhere to the open/close principle. We 
@@ -31,9 +34,19 @@ besides the ones we have created.
 
 ## High-level Design
 
-Our Cell class holds the information about cells mainly to update the colors and help the visualization of the simulation
-in the view. The cells also hold the shape of the cells, and interacts with the Grid class to display the cell shape 
-and color. The Grid class holds the 
+Our Cell class holds the information about an individual cell's current and next state, mainly for the purpose of 
+recording information and updating the colors to help the visualization of the simulation
+in the view. The Cell class isn't dependent on any other classes.
+
+The Grid class holds an arraylist of arraylist of cells, and is in charge of changing the cell's next state and 
+updating the grid of cells by calling methods inside the cell class. It is also in charge of finding the neighbours 
+of a cell at a particular index, with different methods that return the index of said neighbours or the states of 
+said neighbours. These methods are mainly called in Simulation to access the individual cell's information without the 
+simulation classes actually accessing the arraylist or the individual cells (for the purpose of hiding data implementation).
+
+The Simulation classes represents the logic behind each Cellular Autonoma. The simulation class is in charge of creating 
+the grid, obtaining information from the Grid, deciding what the grid should look like in the next round, and command the 
+grid to update its configurations. 
 
 The SimulationXMLFileChooser opens up a file chooser, and upon the user choosing a file, the XMLParser class parses
 the information from the XML file and stores the information into a SimulationXML object. This object returns the information in 
@@ -46,9 +59,9 @@ simulation and initial configuration.
 
 
 ## Assumptions that Affect the Design
-We assumed that there would only be 3 (idk how many actually) types of neighborhoods for each cell, and that we
-would only have rectangular and triangular cells. We also assumed that the grid and simulation  will always be displayed as a rectangle
-shape.
+- We assumed that there would only be two types of neighborhoods for each cell, ie the direct neighbours and the all-neighbours 
+configuration
+- We assumed that the grid and simulation  will always be displayed as a rectangle shape. 
 
 #### Features Affected by Assumptions
 Some features that are affected by these assumptions are the addition of new types of cell shapes
@@ -72,5 +85,13 @@ as a hexagon cell that contains a hexagon with index required for the cell.
 
 - We began working on "saving current configuration to XML file" but wasn't able to finish it. Although the branch containing
 the code for this was merged to the master branch, it's not there; however, it was in the works
-- We didn't think of the new simulation ideas
+
+- We didn't complete many of the new proposed simulation. The Sugarscape simulation only adapted the first preset, and 
+we didn't have time to start ant or lanton's loop
+
+- We didn't have time to implement the ability to freely select all configurations of neighbours to check. 
+
+- Some data for the simulations are hard coded into the source code, such as the satisfactory rate of Segregation, 
+initial energy and reproduction cycle number for WaTor; if there were more time we would've created an XML tag for these 
+data and thus allow users to be able to control it without changing the source code.
 
