@@ -10,7 +10,11 @@ import javafx.stage.Stage;
 
 /**
  * This class opens up a file chooser to load in XML configuration files for the simulations
- * This class depends on Javafx stages
+ * This class depends on JavaFx stages
+ *
+ * To use this class, you would instaniate it and then call it's openFile method to open the file chooser dialog
+ * and choose the xml file.
+ *
  * @author Michelle Tai
  * @author Robert Duvall
  */

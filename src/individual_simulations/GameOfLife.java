@@ -5,6 +5,11 @@ import java.util.List;
 
 /**
  * GameOfLife extends the Simulation class to hold all the logic pertinent to the Game of Life simulation, such as rules
+ *
+ * To create a Game of Life Simulation of height and width of 100, looking at only immediate neighbors, and in a rectangular cell grid,
+ * you would need call:
+ *
+ * Simulation mySimulation = new GameOfLife(100, 100, true, Rectangle);
  * @author Lucy Gu
  */
 public class GameOfLife extends Simulation{
@@ -14,8 +19,8 @@ public class GameOfLife extends Simulation{
 
     /**
      * Create new game of life grid
-     * @param row               row number of cell
-     * @param col               column number of cell
+     * @param row               number of rows
+     * @param col               number of columns
      * @param neighbourNumber   true = all neighbours, false = only immediate
      * @param shape             String that tells if should be triangle or rectangle
      */

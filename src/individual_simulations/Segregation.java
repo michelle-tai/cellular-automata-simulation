@@ -4,6 +4,14 @@ import java.util.*;
 
 /**
  * This class contains all the logic needed for the Segregation simulation.
+ *
+ * To create a Segregation simulation object that has a height of 150, a width of 100, rectangular-shaped cells, and a neighbor
+ * satisfaction rate of 0.75 while looking at
+ * all neighbors instead of just the most immediate ones, you would call:
+ *
+ *
+ * mySimulation = new Segregation(150, 100, true, Rectangle, 0.75);
+ *
  * @author Lucy Gu
  *
  */
@@ -20,8 +28,8 @@ public class Segregation extends Simulation {
 
     /**
      * Create new segregation grid
-     * @param row               row number of cell
-     * @param col               column number of cell
+     * @param row               number of rows
+     * @param col               number of columns
      * @param neighbourNumber   true = all neighbours, false = only immediate
      * @param shape             String that tells if should be triangle or rectangle
      * @param satisfied         the satisfaction rate

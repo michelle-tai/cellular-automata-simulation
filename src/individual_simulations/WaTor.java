@@ -7,6 +7,12 @@ import java.util.List;
 
 /**
  * WaTor holds all the logic needed for the WaTor simulation
+ *
+ * To create a WaTor simulation that has a height of 150, a width of 100, rectangular cells, and only immediate neighbor checking,
+ * as well as fishes having a reproduction time of 2 chronons and being worth 2 energy and sharks having a reproduction time of 10 chronons,
+ * you would have a call:
+ *
+ * Simulation mySimulation = new WaTor(150, 100, false, Rectangle, 2, 10, 2);
  * @author Lucy Gu
  */
 public class WaTor extends Simulation {
@@ -24,8 +30,8 @@ public class WaTor extends Simulation {
 
   /**
    * Create new wator grid
-   * @param row               row number of cell
-   * @param col               column number of cell
+   * @param row               number of rows
+   * @param col               number of columns
    * @param neighbourNumber   true = all neighbours, false = only immediate
    * @param energy            initial energy of shark
    * @param sharkR            shark reproduction cycle

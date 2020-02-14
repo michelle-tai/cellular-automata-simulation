@@ -6,6 +6,12 @@ import java.util.List;
 
 /**
  * Percolation class holds the rules and update behavior for the percolation simulation
+ *
+ * To create a Percolation simulation that is 100 in width and height, checks all neighbors for it's percolation condition, and
+ * is in a rectangular cell shape/grid shape, you would make a call like:
+ *
+ * mySimulation = new Percolation(100, 100, true, Rectangle);
+ *
  * @author Michelle Tai
  * @author Lucy Gu
  **/
@@ -20,8 +26,8 @@ public class Percolation extends Simulation {
     /**
      * Create new percolation grid
      *
-     * @param row             row number of cell
-     * @param col             column number of cell
+     * @param row             number of rows
+     * @param col             number of columns
      * @param neighbourNumber true = all neighbours, false = only immediate
      */
 

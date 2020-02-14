@@ -6,6 +6,12 @@ import java.util.Random;
 
 /**
  * This class deals with all the logic for the rock paper scissor simulation
+ *
+ * To create a Rock Paper Scissor simulation of width 100 and height 150, checks only immediate neighbors instead
+ * of all neighbors, has cells in the shapes of rectangles, and has a threshold of winning equal to 2, you would call:
+ *
+ * Simulation mySimulation = new RockPaperScissor(150, 100, false, Rectangle, 2);
+ *
  * @author Franklin Boampong
  * @author Lucy Gu
  */
@@ -18,8 +24,8 @@ public class RockPaperScissor extends Simulation{
 
     /**
      * Create new rock paper scissor grid
-     * @param row               row number of cell
-     * @param col               column number of cell
+     * @param row               number of rows
+     * @param col               number of columns
      * @param neighbourNumber   true = all neighbours, false = only immediate
      * @param shape             String that tells if should be triangle or rectangle
      * @param thresh            threshhold for change cell state

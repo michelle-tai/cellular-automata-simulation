@@ -8,6 +8,8 @@ import java.util.Map;
 /**
  * Simple immutable value object representing simulation data
  *
+ * This class is mainly used in the SimulationXMLFileChooser Class to store the tag data from the xml file
+ *
  * @author Michelle Tai
  */
 public class SimulationXML {

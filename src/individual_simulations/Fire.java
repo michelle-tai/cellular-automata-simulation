@@ -5,6 +5,12 @@ import java.util.*;
 /**
  * This class holds all the logic behind the fire simulation so that the fire simulation can be displayed.
  * We assume that an empty spot will always be a value of 6, a tree spot with a value of 5, and a burning spot with a value of 3
+ *
+ * To create a Fire simulation that would have a width and height of 100, a triangular cell shape, and a probability of catching on fire of 0.25 while also
+ * checking all neighbors would require a call like this:
+ *
+ * new Fire(100, 100, true, Triangle, 0.25);
+ *
  * @author Franklin Boampong
  */
 public class Fire extends Simulation {
@@ -18,10 +24,11 @@ public class Fire extends Simulation {
 
     /**
      * Create a fire simulation; initialize grid and probability of catching on fire
-     * @param row               row number of cell
-     * @param col               column number of cell
+     * @param row               number of rows
+     * @param col               number of columns
      * @param neighbourNumber   true = all neighbours, false = only immediate
      * @param prob              probability of catching on fire
+     * @param shape             the shape of the cell
      */
     public Fire(int row, int col, boolean neighbourNumber, String shape, double prob) {
         super( row,  col,  neighbourNumber, false, shape);

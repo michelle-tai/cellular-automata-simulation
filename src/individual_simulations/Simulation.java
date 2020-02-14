@@ -10,7 +10,10 @@ import java.util.*;
 /**
  * Simulation holds the logic that tells the cells what to do. It holds a grid item, where data of
  * all cells are stored, and a list of indices for accessing these cells
- * @author LG
+ *
+ * This is mainly used as a superclass for all the simulations so that all simulations will have a way to update and keep track of
+ * the states of cells.
+ * @author Lucy Gu
  */
 public abstract class Simulation{
     private double time = 0;
@@ -22,9 +25,9 @@ public abstract class Simulation{
 
     /**
      *
-     * @param row               row of grid
-     * @param col               col of grid
-     * @param neighbourNumber   immediate only or all
+     * @param row               number of rows in the grid
+     * @param col               number of columns in the grid
+     * @param neighbourNumber   looking only at immediate neighbors or at all
      * @param wrap              if toroidal or not
      * @param shape             default to rectangle, which grid to call
      */

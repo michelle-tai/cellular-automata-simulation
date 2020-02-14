@@ -60,8 +60,8 @@ public class SimulationViewSubscene extends SubScene {
 
     /**
      * The constructor initializes the all the subparts of this subscene, such as the background, the properties file, the simulation, etc
-     * @param width is the width of the
-     * @param height
+     * @param width is the width of the subscene
+     * @param height is the height of the subscene
      */
     public SimulationViewSubscene(int width, int height) {
         super(new AnchorPane(), width, height);
