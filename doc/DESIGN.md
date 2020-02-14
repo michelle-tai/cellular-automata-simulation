@@ -47,7 +47,7 @@ simulation classes actually accessing the arraylist or the individual cells (for
 
 - The Simulation classes represents the logic behind each Cellular Autonoma. The simulation class is in charge of creating 
 the grid, obtaining information from the Grid, deciding what the grid should look like in the next round, and command the 
-grid to update its configurations. 
+grid to update its configurations. Each simulation types extends the Simulation superclass.
 
 - The SimulationXMLFileChooser opens up a file chooser, and upon the user choosing a file, the XMLParser class parses
 the information from the XML file and stores the information into a SimulationXML object. This object returns the information in 
@@ -58,17 +58,28 @@ simulation and initial configuration.
 
 #### Core Classes
 
+- Cell
+- Grid
+- Simulation
+- SimulationXMLFileChooser
+- SimulationXML
+- SimulationViewSubscene
+
 
 ## Assumptions that Affect the Design
 - We assumed that there would only be two types of neighborhoods for each cell, ie the direct neighbours and the all-neighbours 
 configuration
 - We assumed that the grid and simulation will always be displayed as a rectangle shape. 
+- We currently have thresholds and probabilities for simulations coded into respective classes instead of
+having it parsed by the XML/being put into the XML files, but it's not difficult to add in another tag
+into the XML and parse that information. 
 
 #### Features Affected by Assumptions
 
 - Some features that are affected by these assumptions are the addition of new cell-types. For example, it will 
 be difficult if the user all of a sudden want an image of a flower to be the view of a cell.
-
+- If someone wanted to have the probability of a tree catching on fire change in Fire or change the 
+satisfaction threshold in Segregation, they would need to go into the code and change those values. 
 
 ## New Features HowTo
 
@@ -90,7 +101,9 @@ and the program should be able to run with the new design.
 #### Other Features not yet Done
 
 - We began working on "saving current configuration to XML file" but wasn't able to finish it. Although the branch containing
-the code for this was merged to the master branch, it's not there; however, it was in the works
+the code for this was merged to the master branch, it's not there; however, it was in the works.
+
+- We didn't complete the "loading in a style" through XML due to time contraints. 
 
 - We didn't complete many of the new proposed simulation. The Sugarscape simulation only adapted the first preset, and 
 we didn't have time to start ant or lanton's loop
