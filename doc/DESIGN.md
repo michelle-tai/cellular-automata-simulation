@@ -98,6 +98,11 @@ as well as a matching hexagon cell class extending the Cell super class that con
 shape. Then, add the new possible grid and its matching String input tag on line 34 in the Simulation super class, 
 and the program should be able to run with the new design.
 
+- It would be pretty easy to add in an xml tag so that the threshold/probabilities of simulations can be
+set by the user instead of set within the code. The SimulationXML class would just need to add another
+identifier into its list of tag identifiers and create a getter for the threshold/probability values. 
+
+
 #### Other Features not yet Done
 
 - We began working on "saving current configuration to XML file" but wasn't able to finish it. Although the branch containing
