@@ -5,8 +5,8 @@
 
  * Team Member #1 Franklin Boampong
 
-    - Responsibility: Game View including buttons, sliders, linechart, subscenes; Exceptions; 
-    individual simulations including Fire
+    - Responsibility: Game View including buttons, sliders, linechart, subscenes; View/ UI Exceptions; CSS stylings for scenes and 
+    subscenes; individual simulations including Fire; XML Exceptions.
 
 
  * Team Member #2 Michelle Tai
@@ -32,6 +32,8 @@ besides the ones we have created.
 #### What Features are Easy to Add
 - Add a new simulation
 - Add a new possible grid layout
+- Add a new UI feature for a new implementation
+- Add CSS styling for UI feature 
 
 ## High-level Design
 
@@ -118,4 +120,28 @@ we didn't have time to start ant or lanton's loop
 - Some data for the simulations are hard coded into the source code, such as the satisfactory rate of Segregation, 
 initial energy and reproduction cycle number for WaTor; if there were more time we would've created an XML tag for these 
 data and thus allow users to be able to control it without changing the source code.
+
+#### Design choices/decisions pros and cons
+
+ - The decision on whether we should still have a grid class or stick with our previous cell class was one of the 
+    biggest decisions the team had to take. The alternate designs proposed was to have a cell class which possessed 
+    all the cell information and the other design was to have a grid that possessed neighbor information and grid information 
+    but have a cell class that had cell information.
+    
+    The trade-off between the two was that the cell class though was able to give information about each cell, required 
+    we always had to have instances of cells anywhere in the code we needed information about the grid in general or 
+    about the cell. This implementation got us through the basic implementation, however for the extension part, we struggled
+    as we tried as much as possible to not have public methods and the only way top have the same cell in both the subscene
+    and simulation class was to make it public and accessible to every class. On the other hand, having a grid though
+    required writing new code gave the opportunity for refactoring the cell class in other to have a single class which
+    took care of general grid information about total number of cells, number of states present, etc, while making the
+    cell only possess information intrinsic to itself. As such, our code was easily extensible as the simulation was the 
+    only class now interacting with the grid and passing information to other classes. The cells class was then used in
+    the simulation class whenever the view needed an update of status.
+
+    The implementation we prefer is the grid implementation as it makes good use of concepts discussed in class. It makes it easy to
+    consider the grid as the model class which could be queried by the controller to gain the information needed for the 
+    view to update its methods. Also, the dependencies on the cell class were greatly reduced once a grid class was 
+    created and the cell had to only know information about the cell class.
+
 
